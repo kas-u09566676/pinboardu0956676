@@ -1,6 +1,17 @@
 == README
 
-Hi and hope this app meet the critera 
+Hi and hope this app meet the critera, i had issues with  uploading my filed onto github all day at one point my github repsoitry was deeted leaing to me losing allot of work, ive fianlly managed to get it all on github... i have created my application within ruby and rails and it a application heavly based on pintrest.
+
+you can create account /remove a account/ update your account
+you can post images up and remove update delte and view images 
+you can also vote on the image a kind up vote feature 
+i have used a simple form gem to create forms - such as log in and image post
+i have used bootstrap -sass for styling 
+i have used attempted to use masionary gem to allow the post to free low on the index page how ever when attmepted teh images stayed on in a verticle sequence
+i have used paperclip gem as way of posting image it also has a validotr only allowing images to be posted 
+i have used the gem haml to convert code from ruby code to simple html so its easier to manipulate
+i have used act as votable gem for the like feature
+i have used devise to create the user and pin tables which storres the user information and image that are uploaded on the site.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
