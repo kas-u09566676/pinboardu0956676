@@ -1,0 +1,23 @@
+#pin_show.row
+	.col-md-8.col-md-offset-2
+		.panel.panel-default
+			.panel-heading.pin_image
+				= image_tag @Pin.image.url
+			.panel-body
+				%h1= @Pin.title
+				%p.description= @Pin.description
+			.panel-footer
+				.row
+					.col-md-6
+						%p.user
+							Posted by
+							= @Pin.user.email
+					.col-md-6
+						.btn-group.pull-center
+							= link_to like_pin_path(@Pin), method: :put, class: "btn btn-default" do
+								%span.glyphicon.glyphicon-heart
+								= @Pin.get_upvotes.size
+							=link_to "BACK", root_path, class: "btn btn-default"
+							- if user_signed_in?
+							=link_to "WHOOPS", edit_pin_path, class: "btn btn-default"
+							=link_to "REMOVE", pin_path, method: :delete, data: { confirm: "PLEASE DON'T DELETE ME??? IM RELEVENT I SWEAR I AM ?"}, class: "btn btn-default"
